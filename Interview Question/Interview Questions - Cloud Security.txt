@@ -1,0 +1,23 @@
+Interview Questions - Cloud Security
+
+How would you control access to a cloud network?
+
+Restate the Problem
+
+There is an overwhelming security risk rising within the cloud networking system as of late. Attackers are advancing in finding more ways to steal sensitive data from unknowing people. APTs are a form of cloud computing attack where a hacker would continuously steal private information and data that was stored in the cloud. As time goes on, hackers are discovering more ways to adapt against the security measures that protect the cloud.
+
+Provide a Concrete Example Scenario
+
+In Project 1, I deployed a cloud network that consisted of multiple virtual machines as well as network security groups, resource groups, virtual networks, network interfaces, and load balancers. These virtual machines were all linked together to help monitor log files and any data changes within each server. In each virtual machine, I had to configure the access controls to ensure that the IP addresses were not public and only I had access to these machines. I had to configure the network security groups in order to add inbound rules and ensure that my IP address was the only one that could access the ELK virtual machine. I believe that these details relate to the interview question because it provides examples of the steps that have to be taken to ensure security within a cloud networking system. The restriction was necessary for the project because it filters out certain traffic.
+
+Explain the Solution Requirements
+
+I had to implement a network security group around the virtual machines, in order to add inbound security rules. These security rules ensured that only my IP address had access to the virtual machines as well as denying certain traffic. I linked the virtual machines with resource groups and created containers within them. With this I could monitor any data being moved.
+
+Explain the Solution Details
+
+The rules in my network security group allows certain traffic from certain ports, which helps keep the traffic filtered. On my ELK virtual machine I implemented a rule to only whitelist my IP address. The jump box is used to manage other virtual machines that are in a separate security zone. It is especially hardened  because it is used to monitor in between devices with the means for the administrator to access them.
+
+Identify Advantages/Disadvantages of the Solution
+
+I believe my solution scales because a jump box has the benefit of networking and accessing multiple computers with a single. This makes it so that the admin has to log onto a certain device if they want to have access to any of the other networks. One disadvantage of a jump box could be that it has to be updated frequently. A VPN ensures another layer of security, as it can encrypt data and keep any sensitive information safe. A VPN can secure another connection over the internet and by-pass any region restricted websites.
